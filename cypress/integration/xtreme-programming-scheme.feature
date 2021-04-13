@@ -28,7 +28,7 @@
         Тогда открывается страница с заголовком "<Заголовок>"
 
         Примеры:
-            | Практика XP               | Заголовок
-            | TDD                       | Test-Driven Development
-            | Acceptance Tests          | Behavior-Driven Development
+            | Практика XP               | Заголовок |
+            | TDD                       | Test-Driven Development |
+            | Acceptance Tests          | Behavior-Driven Development |
 
