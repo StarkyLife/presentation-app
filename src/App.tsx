@@ -1,27 +1,12 @@
 import React from 'react';
+import { Typography } from '@alfalab/core-components/typography';
 
-import logo from './logo.svg';
+import './app.css';
 
-import './App.css';
-
-const App: React.FC = () => (
-    <div className="App">
-        <header className="App-header">
-            <img src={ logo } className="App-logo" alt="logo" />
-            <p>
-                Edit <code>src/App.tsx</code> and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Learn React
-            </a>
-            <p>Test Driven Development</p>
-        </header>
+export const App: React.FC = () => (
+    <div className="app">
+        <Typography.Title tag="h1">
+            Практики XP в Agile
+        </Typography.Title>
     </div>
 );
-
-export default App;
