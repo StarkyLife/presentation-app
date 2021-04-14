@@ -31,4 +31,5 @@
             | Практика XP               | Заголовок |
             | TDD                       | Test-Driven Development |
             | Acceptance Tests          | Behavior-Driven Development |
+            | Pair Programming          | Парное программирование |
 

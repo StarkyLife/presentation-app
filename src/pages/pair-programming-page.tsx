@@ -3,8 +3,8 @@ import { Typography } from '@alfalab/core-components/typography';
 
 import { TestIds } from '../test-ids';
 
-export const BehaviorDrivenPage: React.FC = () => (
+export const PairProgrammingPage: React.FC = () => (
     <Typography.Title tag="h1" dataTestId={ TestIds.PAGE_TITLE }>
-        Behavior-Driven Development
+        Парное программирование
     </Typography.Title>
 );

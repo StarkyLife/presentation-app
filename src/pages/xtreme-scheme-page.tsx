@@ -9,7 +9,7 @@ import './xtreme-scheme-page.css';
 
 const practices: Array<{ name: string; description: string; path?: string }> = [
     { name: 'TDD', description: 'Разработка через тестирование', path: AppRoutes.TEST_DRIVEN_DEVELOPMENT_PAGE },
-    { name: 'Pair Programming', description: 'Парное программирование' },
+    { name: 'Pair Programming', description: 'Парное программирование', path: AppRoutes.PAIR_PROGRAMMING_PAGE },
     { name: 'Refactoring', description: 'Улучшение кодовой базы' },
     { name: 'Simple Design', description: 'Простой и понятный дизайн системы' },
     { name: 'Planning Games', description: 'Игры планирования (planning poker и др.)' },
