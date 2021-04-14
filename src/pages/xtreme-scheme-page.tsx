@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Tooltip } from '@alfalab/core-components/tooltip';
 import { Typography } from '@alfalab/core-components/typography';
 
-import { AppRoutes } from './app-routes';
+import { AppRoutes } from '../app-routes';
 
 import './xtreme-scheme-page.css';
 

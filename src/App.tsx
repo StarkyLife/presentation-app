@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Typography } from '@alfalab/core-components/typography';
 
+import { BehaviorDrivenPage } from './pages/behavior-driven-page';
+import { TddPage } from './pages/test-driven-page';
+import { XtremeSchemePage } from './pages/xtreme-scheme-page';
 import { AppRoutes } from './app-routes';
-import { BehaviorDrivenPage } from './behavior-driven-page';
-import { TddPage } from './test-driven-page';
-import { XtremeSchemePage } from './xtreme-scheme-page';
 
 import './app.css';
 
