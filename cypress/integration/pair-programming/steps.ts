@@ -1,13 +1,9 @@
-import { Given, Then, When } from 'cypress-cucumber-preprocessor/steps';
+import { Given, Then } from 'cypress-cucumber-preprocessor/steps';
 
 import { TestIds } from '../../../src/test-ids';
 import { getTestIdSelector, triggerKeyDownOnPage } from '../../utils';
 
 Given('пользователь находится на этапе Иллюстрация', () => {
-    triggerKeyDownOnPage('ArrowRight');
-});
-
-When('пользователь нажимает клавишу со стрелкой "Вправо"', () => {
     triggerKeyDownOnPage('ArrowRight');
 });
 
