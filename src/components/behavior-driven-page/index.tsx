@@ -2,9 +2,8 @@ import React, { useCallback, useState } from 'react';
 import { SelectedId, Tab, TabsResponsive } from '@alfalab/core-components/tabs';
 import { Typography } from '@alfalab/core-components/typography';
 
-import { TestIds } from '../test-ids';
-
-import { BddAutomationBlock } from './bdd-automation-block';
+import { TestIds } from '../../test-ids';
+import { BddAutomationBlock } from '../xtreme-scheme-page/bdd-automation-block';
 
 export const BehaviorDrivenPage: React.FC = () => {
     const [selectedTab, setTabId] = useState<SelectedId>('');

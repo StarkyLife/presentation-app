@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { Tooltip } from '@alfalab/core-components/tooltip';
 import { Typography } from '@alfalab/core-components/typography';
 
-import { AppRoutes } from '../app-routes';
+import { AppRoutes } from '../../app-routes';
 
-import './xtreme-scheme-page.css';
+import './styles.css';
 
 const practices: Array<{ name: string; description: string; path?: string }> = [
     { name: 'TDD', description: 'Разработка через тестирование', path: AppRoutes.TEST_DRIVEN_DEVELOPMENT_PAGE },

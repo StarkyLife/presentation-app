@@ -1,5 +1,0 @@
-@import '~@alfalab/core-components/vars/index.css';
-
-.app {
-    margin: var(--gap-m);
-}

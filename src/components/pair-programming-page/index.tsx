@@ -3,8 +3,8 @@ import React, {
 } from 'react';
 import { Typography } from '@alfalab/core-components/typography';
 
-import { usePageKeyDown } from '../hooks/key-press-hooks';
-import { TestIds } from '../test-ids';
+import { usePageKeyDown } from '../../hooks/key-press-hooks';
+import { TestIds } from '../../test-ids';
 
 function pageStatusReducer(
     state: number,

@@ -1,7 +1,7 @@
 import React, { } from 'react';
 import { Typography } from '@alfalab/core-components/typography';
 
-import { useGallery } from '../hooks/gallery';
+import { useGallery } from '../../hooks/gallery';
 
 type Phase = { title: string };
 

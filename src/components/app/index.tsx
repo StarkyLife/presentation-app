@@ -4,14 +4,14 @@ import {
 } from 'react-router-dom';
 import { Typography } from '@alfalab/core-components/typography';
 
-import { BehaviorDrivenPage } from './pages/behavior-driven-page';
-import { PairProgrammingPage } from './pages/pair-programming-page';
-import { TddPage } from './pages/test-driven-page';
-import { XtremeSchemePage } from './pages/xtreme-scheme-page';
-import { AppRoutes } from './app-routes';
-import { TestIds } from './test-ids';
+import { AppRoutes } from '../../app-routes';
+import { TestIds } from '../../test-ids';
+import { BehaviorDrivenPage } from '../behavior-driven-page';
+import { PairProgrammingPage } from '../pair-programming-page';
+import { TddPage } from '../test-driven-page';
+import { XtremeSchemePage } from '../xtreme-scheme-page';
 
-import './app.css';
+import './styles.css';
 
 export const App: React.FC = () => (
     <BrowserRouter>
