@@ -18,24 +18,26 @@ const cons: string[] = [
 ];
 
 export const PairingProsCons: React.FC = () => (
-    <Space
-        direction="vertical"
-        fullWidth={ true }
-        data-test-id={ TestIds.PAIR_PAGE_PROS_CONS_BLOCK }
-    >
-        <Plate view="positive" title="Плюсы">
-            <List>
-                { pros.map((t) => (
-                    <Typography.Text>{ t }</Typography.Text>
-                )) }
-            </List>
-        </Plate>
-        <Plate view="negative" title="Минусы">
-            <List>
-                { cons.map((t) => (
-                    <Typography.Text>{ t }</Typography.Text>
-                )) }
-            </List>
-        </Plate>
-    </Space>
+    <div data-test-id={ TestIds.PAIR_PAGE_PROS_CONS_BLOCK }>
+        <Space
+            direction="vertical"
+            fullWidth={ true }
+            dataTestId={ TestIds.PAIR_PAGE_PROS_CONS_BLOCK }
+        >
+            <Plate view="positive" title="Плюсы">
+                <List>
+                    { pros.map((t) => (
+                        <Typography.Text>{ t }</Typography.Text>
+                    )) }
+                </List>
+            </Plate>
+            <Plate view="negative" title="Минусы">
+                <List>
+                    { cons.map((t) => (
+                        <Typography.Text>{ t }</Typography.Text>
+                    )) }
+                </List>
+            </Plate>
+        </Space>
+    </div>
 );
