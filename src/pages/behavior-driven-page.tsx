@@ -4,6 +4,8 @@ import { Typography } from '@alfalab/core-components/typography';
 
 import { TestIds } from '../test-ids';
 
+import { BddAutomationBlock } from './bdd-automation-block';
+
 export const BehaviorDrivenPage: React.FC = () => {
     const [selectedTab, setTabId] = useState<SelectedId>('');
 
@@ -31,9 +33,7 @@ export const BehaviorDrivenPage: React.FC = () => {
                     </Typography.Text>
                 </Tab>
                 <Tab title="Automation" id="Automation">
-                    <Typography.Text>
-                        Пример незаполненных шагов
-                    </Typography.Text>
+                    <BddAutomationBlock />
                 </Tab>
             </TabsResponsive>
         </section>

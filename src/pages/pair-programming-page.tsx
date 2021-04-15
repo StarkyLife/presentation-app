@@ -1,8 +1,9 @@
 import React, {
-    useCallback, useEffect, useReducer,
+    useCallback, useReducer,
 } from 'react';
 import { Typography } from '@alfalab/core-components/typography';
 
+import { usePageKeyDown } from '../hooks/key-press-hooks';
 import { TestIds } from '../test-ids';
 
 function pageStatusReducer(
@@ -17,19 +18,11 @@ function pageStatusReducer(
 export const PairProgrammingPage: React.FC = () => {
     const [pageStatus, dispatch] = useReducer(pageStatusReducer, 0);
 
-    const handleKeyDown = useCallback((e: KeyboardEvent) => {
-        if (e.key === 'ArrowRight') {
-            dispatch({ type: 'increment' });
-        }
+    const handlePageStatusChange = useCallback(() => {
+        dispatch({ type: 'increment' });
     }, [dispatch]);
 
-    useEffect(() => {
-        document.addEventListener('keydown', handleKeyDown);
-
-        return () => {
-            document.removeEventListener('keydown', handleKeyDown);
-        };
-    }, [handleKeyDown]);
+    usePageKeyDown('ArrowRight', handlePageStatusChange);
 
     return (
         <section>
