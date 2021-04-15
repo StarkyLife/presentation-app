@@ -6,6 +6,8 @@ import { Typography } from '@alfalab/core-components/typography';
 import { usePageKeyDown } from '../../hooks/key-press-hooks';
 import { TestIds } from '../../test-ids';
 
+import { PairingProsCons } from './pairing-pros-cons';
+
 function pageStatusReducer(
     state: number,
     action: { type: 'increment' },
@@ -33,9 +35,7 @@ export const PairProgrammingPage: React.FC = () => {
                 Иллюстрация
             </Typography.Text>
             { pageStatus > 0 && (
-                <Typography.Text tag="p" dataTestId={ TestIds.PAIR_PAGE_PROS_CONS_BLOCK }>
-                    Описание плюсов и минусов
-                </Typography.Text>
+                <PairingProsCons />
             ) }
             { pageStatus > 1 && (
                 <Typography.Text tag="p" dataTestId={ TestIds.PAIR_PAGE_SUGGESTIONS_BLOCK }>
