@@ -28,15 +28,15 @@ export function useGallery<Data>(
         0,
     );
 
-    const handleNextPhaseAction = useCallback(() => {
-        dispatch({ type: 'next' });
+    const handleNextPhaseAction = useCallback((e: KeyboardEvent) => {
+        if (e.key === 'ArrowRight') dispatch({ type: 'next' });
     }, [dispatch]);
-    const handlePrevPhaseAction = useCallback(() => {
-        dispatch({ type: 'prev' });
+    const handlePrevPhaseAction = useCallback((e: KeyboardEvent) => {
+        if (e.key === 'ArrowLeft') dispatch({ type: 'prev' });
     }, [dispatch]);
 
-    usePageKeyDown('ArrowRight', handleNextPhaseAction);
-    usePageKeyDown('ArrowLeft', handlePrevPhaseAction);
+    usePageKeyDown(handleNextPhaseAction);
+    usePageKeyDown(handlePrevPhaseAction);
 
     return galleryData[phaseIdx];
 }

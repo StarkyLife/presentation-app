@@ -2,9 +2,7 @@ import React, { } from 'react';
 import { Typography } from '@alfalab/core-components/typography';
 
 import { useGallery } from '../../hooks/gallery';
-import { bddDiscoveryLinks } from '../../talk-data/useful-links';
 import { Image } from '../ui/image';
-import { LinksBlock } from '../ui/links-block';
 
 const galleryPhases: React.ReactNode[] = [
     <Typography.Title tag="h4">3 Амиго</Typography.Title>,
@@ -16,7 +14,6 @@ const galleryPhases: React.ReactNode[] = [
         url="https://habrastorage.org/webt/ej/ia/ic/ejiaic0jj727yp2voxx37q_37mi.png"
         altText="3 Amigos image"
     />,
-    <LinksBlock links={ bddDiscoveryLinks } />,
 ];
 
 export const BddDiscoveryBlock: React.FC = () => {

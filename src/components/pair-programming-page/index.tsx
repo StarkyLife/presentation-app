@@ -23,11 +23,11 @@ function pageStatusReducer(
 export const PairProgrammingPage: React.FC = () => {
     const [pageStatus, dispatch] = useReducer(pageStatusReducer, 0);
 
-    const handlePageStatusChange = useCallback(() => {
-        dispatch({ type: 'increment' });
+    const handlePageStatusChange = useCallback((e: KeyboardEvent) => {
+        if (e.key === 'ArrowRight') dispatch({ type: 'increment' });
     }, [dispatch]);
 
-    usePageKeyDown('ArrowRight', handlePageStatusChange);
+    usePageKeyDown(handlePageStatusChange);
 
     return (
         <section>

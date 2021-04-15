@@ -1,21 +1,26 @@
 import React, { useCallback, useState } from 'react';
-import { SelectedId, Tab, TabsResponsive } from '@alfalab/core-components/tabs';
+import { Tab, TabsResponsive } from '@alfalab/core-components/tabs';
 import { Typography } from '@alfalab/core-components/typography';
 
+import { useSecretCodeTyping } from '../../hooks/key-press-hooks';
+import { useTabsControl } from '../../hooks/tabs-control';
+import { bddLinks } from '../../talk-data/useful-links';
 import { TestIds } from '../../test-ids';
+import { LinksBlock } from '../ui/links-block';
 
 import { BddAutomationBlock } from './bdd-automation-block';
 import { BddDiscoveryBlock } from './bdd-discovery-block';
 
 export const BehaviorDrivenPage: React.FC = () => {
-    const [selectedTab, setTabId] = useState<SelectedId>('');
+    const { selectedTab, handleTabChange } = useTabsControl();
 
-    const handleTabChange = useCallback((
-        _e: MouseEvent,
-        { selectedId }: { selectedId: SelectedId },
-    ) => {
-        setTabId(selectedId);
-    }, [setTabId]);
+    const [isLinksBlockVisible, setLinksBlockVisiblity] = useState(false);
+
+    const handleSecretKeySuccessfulType = useCallback(() => {
+        setLinksBlockVisiblity(true);
+    }, [setLinksBlockVisiblity]);
+
+    useSecretCodeTyping('platformarulit', handleSecretKeySuccessfulType);
 
     return (
         <section>
@@ -35,6 +40,12 @@ export const BehaviorDrivenPage: React.FC = () => {
                     <BddAutomationBlock />
                 </Tab>
             </TabsResponsive>
+            { isLinksBlockVisible && (
+                <LinksBlock
+                    links={ bddLinks }
+                    dataTestId={ TestIds.BDD_USEFUL_LINKS }
+                />
+            ) }
         </section>
     );
 };

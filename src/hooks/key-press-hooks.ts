@@ -1,17 +1,48 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useReducer } from 'react';
 
-export function usePageKeyDown(key: string, handler: () => void) {
-    const handleKeyDown = useCallback((e: KeyboardEvent) => {
-        if (e.key === key) {
-            handler();
-        }
-    }, [handler, key]);
-
+export function usePageKeyDown(handler: (e: KeyboardEvent) => void) {
     useEffect(() => {
-        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keydown', handler);
 
         return () => {
-            document.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('keydown', handler);
         };
-    }, [handleKeyDown]);
+    }, [handler]);
+}
+
+function secretTypingReducer(
+    state: string,
+    action: { type: 'add'; key: string } | { type: 'clear' },
+) {
+    switch (action.type) {
+        case 'add':
+            return state + action.key;
+        case 'clear':
+            return '';
+        default:
+            return state;
+    }
+}
+
+export function useSecretCodeTyping(
+    secretCode: string,
+    handler: () => void,
+) {
+    const [currentTypedString, dispatch] = useReducer(
+        secretTypingReducer,
+        '',
+    );
+
+    const handleKeyType = useCallback((e: KeyboardEvent) => {
+        dispatch({ type: 'add', key: e.key });
+    }, [dispatch]);
+
+    usePageKeyDown(handleKeyType);
+
+    useEffect(() => {
+        if (currentTypedString.includes(secretCode)) {
+            dispatch({ type: 'clear' });
+            handler();
+        }
+    }, [secretCode, handler, currentTypedString, dispatch]);
 }
