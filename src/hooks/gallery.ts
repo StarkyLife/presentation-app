@@ -12,11 +12,11 @@ export function useGallery<Data>(
         switch (action.type) {
             case 'next':
                 return state >= galleryData.length - 1
-                    ? 0
+                    ? state
                     : state + 1;
             case 'prev':
                 return state <= 0
-                    ? galleryData.length - 1
+                    ? state
                     : state - 1;
             default:
                 return state;

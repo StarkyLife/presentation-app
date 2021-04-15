@@ -2,6 +2,7 @@ import React, { } from 'react';
 import { Typography } from '@alfalab/core-components/typography';
 
 import { useGallery } from '../../hooks/gallery';
+import { TestIds } from '../../test-ids';
 import { Image } from '../ui/image';
 
 const galleryPhases: React.ReactNode[] = [
@@ -20,7 +21,7 @@ export const BddDiscoveryBlock: React.FC = () => {
     const currentPhaseComponent = useGallery(galleryPhases);
 
     return (
-        <div>
+        <div data-test-id={ TestIds.BDD_DISCOVERY_BLOCK }>
             { currentPhaseComponent }
         </div>
     );

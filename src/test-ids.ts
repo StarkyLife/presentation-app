@@ -6,5 +6,8 @@ export const TestIds = {
     PAIR_PAGE_PICTURE_BLOCK: 'pair-page-picture-block',
     PAIR_PAGE_SUGGESTIONS_BLOCK: 'pair-page-suggestions-block',
 
+    BDD_DISCOVERY_BLOCK: 'bdd-discovery-block',
+    BDD_FORMULATION_BLOCK: 'bdd-formulation-block',
+    BDD_AUTOMATION_BLOCK: 'bdd-automation-block',
     BDD_USEFUL_LINKS: 'bdd_useful_links',
 };

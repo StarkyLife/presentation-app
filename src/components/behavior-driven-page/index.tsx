@@ -4,8 +4,10 @@ import { Typography } from '@alfalab/core-components/typography';
 
 import { useSecretCodeTyping } from '../../hooks/key-press-hooks';
 import { useTabsControl } from '../../hooks/tabs-control';
+import featureFileImgUrl from '../../talk-data/feature-file.png';
 import { bddLinks } from '../../talk-data/useful-links';
 import { TestIds } from '../../test-ids';
+import { Image } from '../ui/image';
 import { LinksBlock } from '../ui/links-block';
 
 import { BddAutomationBlock } from './bdd-automation-block';
@@ -32,9 +34,15 @@ export const BehaviorDrivenPage: React.FC = () => {
                     <BddDiscoveryBlock />
                 </Tab>
                 <Tab title="Formulation" id="Formulation">
-                    <Typography.Title tag="h4">
-                        Пример feature файла в cucumber
-                    </Typography.Title>
+                    <div data-test-id={ TestIds.BDD_FORMULATION_BLOCK }>
+                        <Typography.Title tag="h4">
+                            Пример feature файла в cucumber
+                        </Typography.Title>
+                        <Image
+                            url={ featureFileImgUrl }
+                            altText="Feature file example"
+                        />
+                    </div>
                 </Tab>
                 <Tab title="Automation" id="Automation">
                     <BddAutomationBlock />
