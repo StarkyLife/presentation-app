@@ -3,7 +3,9 @@ import { SelectedId, Tab, TabsResponsive } from '@alfalab/core-components/tabs';
 import { Typography } from '@alfalab/core-components/typography';
 
 import { TestIds } from '../../test-ids';
-import { BddAutomationBlock } from '../xtreme-scheme-page/bdd-automation-block';
+
+import { BddAutomationBlock } from './bdd-automation-block';
+import { BddDiscoveryBlock } from './bdd-discovery-block';
 
 export const BehaviorDrivenPage: React.FC = () => {
     const [selectedTab, setTabId] = useState<SelectedId>('');
@@ -22,14 +24,12 @@ export const BehaviorDrivenPage: React.FC = () => {
             </Typography.Title>
             <TabsResponsive onChange={ handleTabChange } selectedId={ selectedTab }>
                 <Tab title="Discovery" id="Discovery">
-                    <Typography.Text>
-                        3 Амиго
-                    </Typography.Text>
+                    <BddDiscoveryBlock />
                 </Tab>
                 <Tab title="Formulation" id="Formulation">
-                    <Typography.Text>
+                    <Typography.Title tag="h4">
                         Пример feature файла в cucumber
-                    </Typography.Text>
+                    </Typography.Title>
                 </Tab>
                 <Tab title="Automation" id="Automation">
                     <BddAutomationBlock />

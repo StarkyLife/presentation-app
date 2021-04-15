@@ -1,24 +1,15 @@
 import React, {
     useCallback, useReducer,
 } from 'react';
-import { Link } from '@alfalab/core-components/link';
-import { List } from '@alfalab/core-components/list';
-import { ListHeader } from '@alfalab/core-components/list-header';
 import { Typography } from '@alfalab/core-components/typography';
 
 import { usePageKeyDown } from '../../hooks/key-press-hooks';
+import { pairingCons, pairingPros } from '../../talk-data/pair-pros-cons';
+import { pairingLinks } from '../../talk-data/useful-links';
 import { TestIds } from '../../test-ids';
-
-import { PairingProsCons } from './pairing-pros-cons';
-
-import './styles.css';
-
-const usefulLinks: Array<{ title: string; url: string }> = [
-    {
-        title: 'https://habr.com/ru/company/barsgroup/blog/533630/',
-        url: 'Парное программирование: стили, организация, тайм-менеджмент',
-    },
-];
+import { Image } from '../ui/image';
+import { LinksBlock } from '../ui/links-block';
+import { ProsConsBlock } from '../ui/pros-cons-block';
 
 function pageStatusReducer(
     state: number,
@@ -44,24 +35,23 @@ export const PairProgrammingPage: React.FC = () => {
                 Парное программирование
             </Typography.Title>
             <div data-test-id={ TestIds.PAIR_PAGE_PICTURE_BLOCK }>
-                <img
-                    className="pair-programming-page-img"
-                    src="https://habrastorage.org/webt/vd/up/uv/vdupuvortchb0ckbjfgufmoizj8.jpeg"
-                    alt="Иллюстрация парного программирования"
+                <Image
+                    url="https://habrastorage.org/webt/vd/up/uv/vdupuvortchb0ckbjfgufmoizj8.jpeg"
+                    altText="Иллюстрация парного программирования"
                 />
             </div>
             { pageStatus > 0 && (
-                <PairingProsCons />
+                <ProsConsBlock
+                    pros={ pairingPros }
+                    cons={ pairingCons }
+                    dataTestId={ TestIds.PAIR_PAGE_PROS_CONS_BLOCK }
+                />
             ) }
             { pageStatus > 1 && (
-                <div data-test-id={ TestIds.PAIR_PAGE_SUGGESTIONS_BLOCK }>
-                    <ListHeader title="Полезные ссылки" />
-                    <List>
-                        { usefulLinks.map((l) => (
-                            <Link href={ l.url }>{ l.title }</Link>
-                        )) }
-                    </List>
-                </div>
+                <LinksBlock
+                    links={ pairingLinks }
+                    dataTestId={ TestIds.PAIR_PAGE_SUGGESTIONS_BLOCK }
+                />
             ) }
         </section>
     );
