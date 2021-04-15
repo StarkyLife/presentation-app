@@ -29,12 +29,12 @@ export const PairProgrammingPage: React.FC = () => {
             <Typography.Title tag="h1" dataTestId={ TestIds.PAGE_TITLE }>
                 Парное программирование
             </Typography.Title>
-            <Typography.Text tag="p" dataTestId={ TestIds.PAIR_PAGE_PROBLEM_BLOCK }>
-                Описание проблемы
+            <Typography.Text tag="p" dataTestId={ TestIds.PAIR_PAGE_PICTURE_BLOCK }>
+                Иллюстрация
             </Typography.Text>
             { pageStatus > 0 && (
-                <Typography.Text tag="p" dataTestId={ TestIds.PAIR_PAGE_PICTURE_BLOCK }>
-                    Иллюстрация
+                <Typography.Text tag="p" dataTestId={ TestIds.PAIR_PAGE_PROS_CONS_BLOCK }>
+                    Описание плюсов и минусов
                 </Typography.Text>
             ) }
             { pageStatus > 1 && (
