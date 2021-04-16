@@ -29,25 +29,27 @@ export const BehaviorDrivenPage: React.FC = () => {
             <Typography.Title tag="h1" dataTestId={ TestIds.PAGE_TITLE }>
                 Behavior-Driven Development
             </Typography.Title>
-            <TabsResponsive onChange={ handleTabChange } selectedId={ selectedTab }>
-                <Tab title="Discovery" id="Discovery">
-                    <BddDiscoveryBlock />
-                </Tab>
-                <Tab title="Formulation" id="Formulation">
-                    <div data-test-id={ TestIds.BDD_FORMULATION_BLOCK }>
-                        <Typography.Title tag="h4">
-                            Пример feature файла в cucumber
-                        </Typography.Title>
-                        <Image
-                            url={ featureFileImgUrl }
-                            altText="Feature file example"
-                        />
-                    </div>
-                </Tab>
-                <Tab title="Automation" id="Automation">
-                    <BddAutomationBlock />
-                </Tab>
-            </TabsResponsive>
+            { !isLinksBlockVisible && (
+                <TabsResponsive onChange={ handleTabChange } selectedId={ selectedTab }>
+                    <Tab title="Discovery" id="Discovery">
+                        <BddDiscoveryBlock />
+                    </Tab>
+                    <Tab title="Formulation" id="Formulation">
+                        <div data-test-id={ TestIds.BDD_FORMULATION_BLOCK }>
+                            <Typography.Title tag="h4">
+                                Пример feature файла в cucumber
+                            </Typography.Title>
+                            <Image
+                                url={ featureFileImgUrl }
+                                altText="Feature file example"
+                            />
+                        </div>
+                    </Tab>
+                    <Tab title="Automation" id="Automation">
+                        <BddAutomationBlock />
+                    </Tab>
+                </TabsResponsive>
+            ) }
             { isLinksBlockVisible && (
                 <LinksBlock
                     links={ bddLinks }
