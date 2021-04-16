@@ -11,7 +11,7 @@ type Phase = { title: string; imgUrl: string };
 
 const galleryPhases: Phase[] = [
     { title: 'Пример незаполненных шагов', imgUrl: emptyStepsImgUrl },
-    { title: 'Пример заполненного шага', imgUrl: filledStepsImgUrl },
+    { title: 'Пример заполненных шагов', imgUrl: filledStepsImgUrl },
 ];
 
 export const BddAutomationBlock: React.FC = () => {

@@ -16,7 +16,6 @@
             | Acceptance Tests          | Автоматизированные приемочные тесты |
             | Whole Team                | Вся команда сидит вместе и работает над одной задачей |
             | Collective Code Ownership | Коллективное владение кодом (будь то LoanMB, фронт или мидл) |
-            | Code Standarts            | Стандарты |
             | Sustainable Pace          | Устойчивый темп |
             | Metaphor                  | a story that everyone - customers, programmers, and managers - can tell about how the system works |
             | Continuous Integration    | Develop -> Build -> Test end-to-end -> Stage (https://www.scaledagileframework.com/continuous-integration/) |

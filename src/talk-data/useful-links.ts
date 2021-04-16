@@ -20,4 +20,8 @@ export const bddLinks: LinkData[] = [
         title: 'Серия платных видеоуроков от Uncle Bob',
         url: 'https://cleancoders.com/series/clean-code/bdd',
     },
+    {
+        title: 'Серия бесплатных лекций от Uncle Bob на темы Clean Code, Clean Architecture, Clean Agile',
+        url: 'https://www.youtube.com/watch?v=l-gF0vDhJVI',
+    },
 ];

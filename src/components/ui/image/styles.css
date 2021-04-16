@@ -1,3 +1,7 @@
 .image {
     width: 100%;
 }
+
+.image__small {
+    width: 60%;
+}
