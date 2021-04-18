@@ -23,8 +23,8 @@ export const SchemeElement = React.memo<XpPractice>(({
             targetClassName={ `scheme-element ${position}` }
         >
             <Button
-                view="secondary"
-                className="scheme-element__button"
+                view="ghost"
+                className={ `scheme-element__button${path ? '' : ' scheme-element__button_disabled'}` }
                 onClick={ () => path && history.push(path) }
             >
                 { name }

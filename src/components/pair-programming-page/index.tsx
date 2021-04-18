@@ -26,7 +26,7 @@ export const PairProgrammingPage: React.FC = () => {
 
     return (
         <section>
-            <Typography.Title tag="h1" dataTestId={ TestIds.PAGE_TITLE }>
+            <Typography.Title defaultMargins={ true } tag="h1" dataTestId={ TestIds.PAGE_TITLE }>
                 Парное программирование
             </Typography.Title>
             { currentPhaseComponent }

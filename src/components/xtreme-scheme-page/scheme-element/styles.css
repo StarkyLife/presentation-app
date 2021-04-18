@@ -1,3 +1,5 @@
+@import '~@alfalab/core-components/vars/index.css';
+
 .scheme-element {
     position: absolute;
     z-index: 1;
@@ -5,8 +7,11 @@
 .scheme-element__button {
     background: white;
 }
+.scheme-element__button_disabled {
+    color: var(--button-ghost-disabled-color);
+}
 .top {
-    top: -20px;
+    top: -10px;
     left: calc(50% - 50px);
 }
 .right {
@@ -18,7 +23,7 @@
     left: -70px;
 }
 .bottom {
-    top: calc(100% - 20px);
+    top: calc(100% - 10px);
     left: calc(50% - 50px);
 }
 .top-left {

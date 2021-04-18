@@ -20,14 +20,14 @@ export const ProsConsBlock: React.FC<Props> = ({
             <Plate view="positive" title="Плюсы">
                 <List>
                     { pros.map((t) => (
-                        <Typography.Text>{ t }</Typography.Text>
+                        <Typography.Text key={ t }>{ t }</Typography.Text>
                     )) }
                 </List>
             </Plate>
             <Plate view="negative" title="Минусы">
                 <List>
                     { cons.map((t) => (
-                        <Typography.Text>{ t }</Typography.Text>
+                        <Typography.Text key={ t }>{ t }</Typography.Text>
                     )) }
                 </List>
             </Plate>
