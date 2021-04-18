@@ -3,10 +3,8 @@ import { Typography } from '@alfalab/core-components/typography';
 
 import { useGallery } from '../../hooks/gallery';
 import { pairingCons, pairingPros } from '../../talk-data/pair-pros-cons';
-import { pairingLinks } from '../../talk-data/useful-links';
 import { TestIds } from '../../test-ids';
 import { Image } from '../ui/image';
-import { LinksBlock } from '../ui/links-block';
 import { ProsConsBlock } from '../ui/pros-cons-block';
 
 const galleryPhases: React.ReactNode[] = [
@@ -20,10 +18,6 @@ const galleryPhases: React.ReactNode[] = [
         pros={ pairingPros }
         cons={ pairingCons }
         dataTestId={ TestIds.PAIR_PAGE_PROS_CONS_BLOCK }
-    />,
-    <LinksBlock
-        links={ pairingLinks }
-        dataTestId={ TestIds.PAIR_PAGE_SUGGESTIONS_BLOCK }
     />,
 ];
 

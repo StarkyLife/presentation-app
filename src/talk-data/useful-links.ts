@@ -1,13 +1,14 @@
 import { LinkData } from '../types/link-data';
 
-export const pairingLinks: LinkData[] = [
+export const usefulLinks: LinkData[] = [
+    {
+        title: 'Серия бесплатных лекций от Uncle Bob на темы Clean Code, Clean Architecture, Clean Agile',
+        url: 'https://www.youtube.com/watch?v=l-gF0vDhJVI',
+    },
     {
         title: 'Парное программирование: стили, организация, тайм-менеджмент',
         url: 'https://habr.com/ru/company/barsgroup/blog/533630/',
     },
-];
-
-export const bddLinks: LinkData[] = [
     {
         title: '3 Амиго — способ коммуникации, для создания качественного продукта',
         url: 'https://habr.com/ru/company/tinkoff/blog/449424/',
@@ -19,9 +20,5 @@ export const bddLinks: LinkData[] = [
     {
         title: 'Серия платных видеоуроков от Uncle Bob',
         url: 'https://cleancoders.com/series/clean-code/bdd',
-    },
-    {
-        title: 'Серия бесплатных лекций от Uncle Bob на темы Clean Code, Clean Architecture, Clean Agile',
-        url: 'https://www.youtube.com/watch?v=l-gF0vDhJVI',
     },
 ];

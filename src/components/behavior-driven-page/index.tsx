@@ -5,10 +5,8 @@ import { Typography } from '@alfalab/core-components/typography';
 import { useSecretCodeTyping } from '../../hooks/key-press-hooks';
 import { useTabsControl } from '../../hooks/tabs-control';
 import featureFileImgUrl from '../../talk-data/feature-file.png';
-import { bddLinks } from '../../talk-data/useful-links';
 import { TestIds } from '../../test-ids';
 import { Image } from '../ui/image';
-import { LinksBlock } from '../ui/links-block';
 
 import { BddAutomationBlock } from './bdd-automation-block';
 import { BddDiscoveryBlock } from './bdd-discovery-block';
@@ -51,10 +49,11 @@ export const BehaviorDrivenPage: React.FC = () => {
                 </TabsResponsive>
             ) }
             { isLinksBlockVisible && (
-                <LinksBlock
-                    links={ bddLinks }
-                    dataTestId={ TestIds.BDD_USEFUL_LINKS }
-                />
+                <Typography.Text view="primary-large" dataTestId={ TestIds.BDD_SECRET_BLOCK }>
+                    Молодец :) Не поленился раскрыть этот блок.
+                    Тут была полезная информация,
+                    но она переехала на главную страницу, чтобы и у ленивых был доступ к ней.
+                </Typography.Text>
             ) }
         </section>
     );

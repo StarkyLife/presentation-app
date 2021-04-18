@@ -1,8 +1,13 @@
-.scheme {
+.scheme-page {
     margin-top: 50px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scheme {
+    margin-bottom: 50px;
 }
 
 .circle-container {
@@ -29,44 +34,4 @@
     width: 400px;
     height: 200px;
     border: 5px solid green;
-}
-
-.scheme-element__button {
-    background: white;
-}
-.scheme-element {
-    position: absolute;
-    z-index: 1;
-}
-.top {
-    top: -20px;
-    left: calc(50% - 50px);
-}
-.right {
-    top: calc(50% - 20px);
-    left: calc(100% - 50px);
-}
-.left {
-    top: calc(50% - 10px);
-    left: -70px;
-}
-.bottom {
-    top: calc(100% - 20px);
-    left: calc(50% - 50px);
-}
-.top-left {
-    top: 5%;
-    left: 0;
-}
-.top-right {
-    top: 5%;
-    right: 0;
-}
-.bottom-right {
-    top: 80%;
-    right: -5px;
-}
-.bottom-left {
-    top: 80%;
-    left: 5px;
 }

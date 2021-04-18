@@ -9,7 +9,7 @@ When('пользователь наберет на клавиатуре фраз
     }
 });
 
-Then('появится блок с полезными ссылками про BDD', () => {
-    cy.get(getTestIdSelector(TestIds.BDD_USEFUL_LINKS))
+Then('появится секретный блок', () => {
+    cy.get(getTestIdSelector(TestIds.BDD_SECRET_BLOCK))
         .should('exist');
 });

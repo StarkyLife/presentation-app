@@ -18,7 +18,7 @@ export const LinksBlock: React.FC<Props> = ({
         <ListHeader title="Полезные ссылки" />
         <List>
             { links.map((l) => (
-                <Link href={ l.url } target="_blank">{ l.title }</Link>
+                <Link key={ l.title } href={ l.url } target="_blank">{ l.title }</Link>
             )) }
         </List>
     </div>
